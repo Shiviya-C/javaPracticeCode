@@ -1,0 +1,25 @@
+import java.util.*;
+class rem_Duplicate{
+    public static <T>ArrayList<T>Duplicate_num(ArrayList<T> list)
+    {
+        ArrayList<T> newList = new ArrayList<T>();
+        for(T element : list)
+        if(!newList.contains(element)){
+            newList.add(element);
+        }
+        return newList;
+    }
+    public static void main(String args[]){
+        Scanner obj = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>();
+        int num;
+        while(true){
+            num = obj.nextInt();
+            if(num == -1)
+            break;
+            else
+            list.add(num);
+        }
+            System.out.print(Duplicate_num(list));
+    }
+}
