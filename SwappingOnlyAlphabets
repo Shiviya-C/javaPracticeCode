@@ -1,0 +1,25 @@
+import java.util.*;
+class main{
+    public static void main(String args[]){
+        Scanner obj = new Scanner(System.in);
+        String str = obj.nextLine();
+        char[] c = str.toCharArray();
+        int start = 0;
+        int end = c.length-1;
+        while(start < end ){
+            while(Character.isDigit(c[start])){
+                start++;
+            }
+            while(Character.isDigit(c[end])){
+               end--; 
+            }
+            char temp = c[start];
+            c[start] = c[end];
+            c[end] = temp ;
+            start++;
+            end--;
+
+        }
+        System.out.print(c);
+    }
+}
