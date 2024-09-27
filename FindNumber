@@ -1,0 +1,15 @@
+import java.util.*;
+class Main{
+    
+    public static void main(String args[]){
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+        int first_no = 1;
+        while(first_no <= num){
+            first_no = first_no*2;
+        }
+        first_no = first_no/2;
+        int res = (num - first_no)*2 + 1;
+        System.out.print(res);
+    }
+}
