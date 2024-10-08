@@ -1,0 +1,24 @@
+import java.util.*;
+class main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int[] arr = new int[size];
+        for(int i=0;i<size;i++){
+            arr[i] = obj.nextInt();
+        }
+        int buy = obj.nextInt();
+        System.out.println(shop(arr,buy,size));
+    }
+    public static int shop(int[] arr,int buy,int size){
+        if(buy>size){
+            return -1;
+        }
+        int sum = 0;
+        Arrays.sort(arr);
+        for(int i=0;i<buy;i++){
+            sum += arr[i];
+        }
+        return sum;
+    }
+}
